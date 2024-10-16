@@ -4,7 +4,7 @@
     --color-text: #333;
     --color-secundario: #ffffff;
     --color-titulo: #007BFF;
-    --color-subtitulo: #000000;
+    --color-subtitulo: #ff6b6b;
 }
 
 body {
@@ -13,10 +13,11 @@ body {
     background: var(--color-fondo);
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evitar el desbordamiento horizontal */
 }
 
 header {
-    background-color: var(--color-header);
+    background-color: var(--color-header); 
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -37,7 +38,7 @@ header {
 
 .menu-item {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 40px;
     margin: 0 10px;
     background: linear-gradient(45deg, #007BFF, #00C6FF);
     color: var(--color-secundario);
@@ -59,45 +60,61 @@ header {
     color: inherit;
 }
 
-#titulo {
+h1, h2, h3, h4 {
+    color: var(--color-text);
     text-align: center;
-    color: var(--color-titulo);
-    margin-top: 20px;
+    font-weight: 700;
+    margin-top: 0;
 }
 
+#titulo {
+    margin-top: 20px;
+}
+#info-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+}
 #descripcion {
-    color: var(--color-subtitulo);
-    font-size: 1.1em;
-    font-style: italic;
     text-align: center;
+    font-size: 1.1em;
     margin: 20px;
 }
 
 .info-section, .benefits-section {
-    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.info-box {
+    background: var(--color-secundario);
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.subtitulo {
-    color: var(--color-titulo);
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.info-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 #contenedor-1 {
-    width: 100vw;
+    width: 100%;
     height: 400px;
-    background-image: url("./img/Minuto 85 millos.jpeg");
+    background-image: url("./img/portada.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain; /* Cambiado de cover a contain */
+    background-position: center; /* Centrar la imagen */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -114,3 +131,40 @@ ul {
     padding: 20px 0; 
 }
 
+#contenedor-3, #contenedor-4, #contenedor-5 {
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#contenedor-3 {
+    background-image: url("./img/agt millos.jpg");
+}
+
+#contenedor-4 {
+    background-image: url("./img/Minuto 85 millos.jpeg");
+}
+
+#contenedor-5 {
+    background-image: url("./img/Messi millos.jfif");
+}
+
+#contenedor-3:hover, #contenedor-4:hover, #contenedor-5:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: var(--color-header);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+}

@@ -13,10 +13,11 @@ body {
     background: var(--color-fondo);
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Evitar el desbordamiento horizontal */
 }
 
 header {
-    background-color: var(--color-header);
+    background-color: var(--color-header); 
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -58,6 +59,11 @@ header {
     text-decoration: none;
     color: inherit;
 }
+#titulo {
+    text-align: center;
+    color: var(--color-titulo);
+    margin-top: 20px;
+}
 
 h1, h2, h3, h4 {
     color: var(--color-text);
@@ -70,18 +76,46 @@ h1, h2, h3, h4 {
     margin-top: 20px;
 }
 
+#info-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+}
 #descripcion {
-    text-align: center;
+    color: var(--color-subtitulo);
     font-size: 1.1em;
+    font-style: italic;
+    text-align: center;
     margin: 20px;
 }
 
+
+.info-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 #contenedor-1 {
-    width: 100vw;
+    width: 100%;
     height: 400px;
-    background-image: url("./img/agt millos.JPG");
+    background-image: url("./img/portada.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain; /* Cambiado de cover a contain */
+    background-position: center; /* Centrar la imagen */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -109,15 +143,15 @@ h1, h2, h3, h4 {
 }
 
 #contenedor-3 {
-    background-image: url("./img/portada.png");
+    background-image: url("./img/agt millos.jpg");
 }
 
 #contenedor-4 {
-    background-image: url("./img/Minuto\ 85\ millos.jpeg");
+    background-image: url("./img/Minuto 85 millos.jpeg");
 }
 
 #contenedor-5 {
-    background-image: url("./img/Messi\ millos.jfif");
+    background-image: url("./img/Messi millos.jfif");
 }
 
 #contenedor-3:hover, #contenedor-4:hover, #contenedor-5:hover {
@@ -135,4 +169,3 @@ footer {
 footer p {
     margin: 0;
 }
-
