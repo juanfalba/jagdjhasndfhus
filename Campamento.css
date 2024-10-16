@@ -95,15 +95,7 @@ header {
     color: var(--color-titulo);
     margin-bottom: 10px;
 }
-.info-box {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+
 ul {
     list-style-type: disc;
     padding-left: 20px;
