@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background-color: var(--color-header);
+    background-color: var(--color-header); 
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
 #contenedor-1 {
     width: 100vw;
     height: 400px;
-    background-image: url("./img/portada.PNG");
+    background-image: url("./img/portada.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -109,15 +109,15 @@ h1, h2, h3, h4 {
 }
 
 #contenedor-3 {
-    background-image: url("./img/agt millos.JPG");
+    background-image: url("./img/agt\ millos.jpg");
 }
 
 #contenedor-4 {
-    background-image: url("./img/Minuto 85 millos.jpeg");
+    background-image: url("./img/Minuto\ 85\ millos.jpeg");
 }
 
 #contenedor-5 {
-    background-image: url("./img/Messi millos.jfif");
+    background-image: url("./img/Messi\ millos.jfif");
 }
 
 #contenedor-3:hover, #contenedor-4:hover, #contenedor-5:hover {

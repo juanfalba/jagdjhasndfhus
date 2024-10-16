@@ -109,15 +109,15 @@ h1, h2, h3, h4 {
 }
 
 #contenedor-3 {
-    background-image: url("./img/portada.PNG");
+    background-image: url("./img/portada.png");
 }
 
 #contenedor-4 {
-    background-image: url("./img/Minuto 85 millos.jpeg");
+    background-image: url("./img/Minuto\ 85\ millos.jpeg");
 }
 
 #contenedor-5 {
-    background-image: url("./img/Messi millos.jfif");
+    background-image: url("./img/Messi\ millos.jfif");
 }
 
 #contenedor-3:hover, #contenedor-4:hover, #contenedor-5:hover {
